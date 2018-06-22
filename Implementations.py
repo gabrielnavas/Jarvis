@@ -46,6 +46,7 @@ class Recognize_voice():
         r = sr.Recognizer()
         with sr.Microphone() as source:
             r.adjust_for_ambient_noise(source)
+                             
             audio = r.listen(source)
 
         # recognize speech using Google Speech Recognition

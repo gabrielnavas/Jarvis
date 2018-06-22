@@ -3,3 +3,4 @@ pip install SpeechRecognition
 pip install pyaudio
 sudo pip install PocketSphinx
 trizen -S python-espeak
+sudo pip install ChatterBot
