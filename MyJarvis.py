@@ -18,26 +18,28 @@ class MyJarvis(Jarvis):
 
     def say_hello_user(self):
         time.sleep(2)
-        self.fala("Ola" + self.my_name, "pt-br")
+        self.fala("Olá, " + self.my_name, "pt-br")
        
     def start(self):
  
-        #self.fala("CARREGANDO SISTEMA", "pt-br")  
-        #time.sleep(3)
+        self.fala("CARREGANDO SISTEMA", "pt-br")  
+        time.sleep(3)
 
         if(self.my_name is not ''):
             self.say_hello_user()
 
-        #self.fala("SISTEMA CARREGADO", "pt-br")
+        self.fala("SISTEMA CARREGADO", "pt-br")
         time.sleep(5)
 
 
         while(True):
             
-            print("\n\n\n\n\nDIGA ALGO....\n\n\n\n")
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\tDIGA ALGO....\n\n\n\n")
+
             texto = self.escuta("pt-br")
-            
-            if(texto is not None):
+            #texto = str(input(" -- > "))
+
+            if(texto is not None and len(texto) is not 0):
                 print("\n\n\n\nVOCE: " + texto + "\n\n\n")
 
                 texto = str(texto)

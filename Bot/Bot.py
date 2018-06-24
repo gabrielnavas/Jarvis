@@ -4,7 +4,10 @@ import os
 
 class Bot():
     def __init__(self, name):      
-        self.bot = ChatBot(name)
+        self.bot = ChatBot(name,
+        logic_adapters=[
+        "chatterbot.logic.BestMatch"
+        ])
         self.bot.set_trainer(ListTrainer)
 
     def get_response(self, quest):

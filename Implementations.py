@@ -2,6 +2,7 @@ import speech_recognition as sr
 import os
 import time
 import subprocess
+from gtts import gTTS
  
 class Text_to_speech():
     """ # TUTORIAL
@@ -31,7 +32,7 @@ class Text_to_speech():
     def __say_with_espeak(self, text, lang):
         subprocess.call("espeak -v {0} {1}".format(lang, text), shell=True)
 
-    def speak(self, text, lang="pt-br"):
+    def __old_speak(self, text, lang="pt-br"):
         try:
             
             text = str(text).split(" ")
@@ -40,6 +41,13 @@ class Text_to_speech():
                 self.__say_with_espeak(word, lang)
         except:
             print("ERROR... class Text_to_speech.speak [ PRESS ENTER ]")
+
+
+    def speak(self, text, lang):
+        voice = gTTS(text, lang = lang)
+        voice.save("voz.mp3")
+        subprocess.call(['mplayer', 'voz.mp3'])
+        
 
 class Recognize_voice():
     def get_audio_google_recognition(self, lang="pt-br"):
