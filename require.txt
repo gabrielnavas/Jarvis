@@ -1,8 +1,7 @@
-sudo pacman -S python-pip
+apt-get install python-pip
 pip install SpeechRecognition
 pip install pyaudio
-sudo pip install PocketSphinx
-trizen -S python-espeak
+pip install PocketSphinx
+python-espeak #lib
 sudo pip install ChatterBot
-sudo pacman -S mplayer
 
