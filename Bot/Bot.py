@@ -11,12 +11,7 @@ class Bot():
         self.bot.set_trainer(ListTrainer)
 
     def get_response(self, quest):
-        response = self.bot.get_response(quest)
-        
-        if(float(response.confidence) > 0.3):
-            return response
-        else:
-            return None    
+        return self.bot.get_response(quest)
 
     def load_for_trainer(self):
         arqs_list = os.listdir("Bot/learning_list/")

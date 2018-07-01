@@ -1,65 +1,41 @@
-from Implementations import Jarvis
-import time
+from Jarvis import *
 from Bot.Bot import *
-
-class Instructions():
-    pass
-    
+from os import system
 
 class MyJarvis(Jarvis):
-    def __init__(self):
-        self.my_name = ''
-        self.jarvis = Bot('Jarvis')
-        self.jarvis.load_for_trainer()
+    def __init__(self, locale='pt-br', creatorName='', chatBotName='Jarvis', coeficient_confidence= 0.5):
 
-    def change_name(self, name):
+        self.__init__(locale)
+        self.creatorName = creatorName
+        self.botName = chatBotName
+        self.jarvisBot = Bot(chatBotName)
+        self.jarvisBot.load_for_trainer()
+        self.coeficient_confidence = float(coeficient_confidence)
+
+    def get_creatorName(self):
+        return self.creatorName
+
+    def change_creator_name(self, name):
         if(len(name) > 0):
-            self.my_name = name
+            self.creatorName = name
 
-    def say_hello_user(self):
-        time.sleep(2)
-        self.fala("Olá, " + self.my_name, "pt-br")
-       
-    def start(self):
- 
-        self.fala("CARREGANDO SISTEMA", "pt-br")  
-        time.sleep(3)
+    def say_hello_creator(self):
+        self.fala("Olá, " + self.creatorName)
 
-        if(self.my_name is not ''):
-            self.say_hello_user()
+    def change_coeficient_confidence(self, coef):
+        if(float(coef) > 0.0):
+            self.coeficient_confidence = coef
+            return True
 
-        self.fala("SISTEMA CARREGADO", "pt-br")
-        time.sleep(5)
+    def resposta(self, text_enter):
+        resp_jarvis = self.jarvisBot.get_response(text_enter)
 
+        if(float(resp_jarvis.confidence) > self.coeficient_confidence):
+            print(resp_jarvis)
+            self.fala(str(resp_jarvis))
+        else:
+            self.fala('Não entendi.')
 
-        while(True):
-            
-            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\tDIGA ALGO....\n\n\n\n")
-
-            texto = self.escuta("pt-br")
-            #texto = str(input(" -- > "))
-
-            if(texto is not None and len(texto) is not 0):
-                print("\n\n\n\nVOCE: " + texto + "\n\n\n")
-
-                texto = str(texto)
-                if('sair' in texto.lower()):
-                    self.fala("Até mais Mister" + self.my_name, "pt-br")   
-                    exit()
-                
-                if('navegador' in texto.lower()):
-                    self.fala("Abrindo navegador Mr" + self.my_name, "pt-br")
-                    #fazer class
-
-                else:
-                    resp_jarvis_bot = str(self.jarvis.get_response(texto))
-                    self.fala(resp_jarvis_bot, "pt-br")    
-
-
-def main():
-    jarvis = MyJarvis()
-    jarvis.change_name("Gabriel Miguel Navas")
-    jarvis.start()
-
-if __name__ == '__main__':
-    main()
+    def byebye(self):
+            self.fala('Até mais.')
+            system.exit(0)
