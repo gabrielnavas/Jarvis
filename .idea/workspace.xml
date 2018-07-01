@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b69abd26-7e10-41a2-89a9-2944c8c76d26" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Bot/Text_to_speech.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bot/learning_list/bye" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jarvis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MonitorOS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recognize_voice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Text_to_speech.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/default_browser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bot/Bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot/Bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Implementations.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyJarvis.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyJarvis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voz.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/voz.mp3" afterDir="false" />
-    </list>
+    <list default="true" id="b69abd26-7e10-41a2-89a9-2944c8c76d26" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +26,8 @@
       <file leaf-file-name="MonitorOS.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MonitorOS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="199" column="36" lean-forward="true" selection-start-line="199" selection-start-column="36" selection-end-line="199" selection-end-column="36" />
+            <state relative-caret-position="315">
+              <caret line="185" column="9" lean-forward="true" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
                 <element signature="e#94#5026#0" />
@@ -185,7 +171,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17078651" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32934132" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -223,7 +209,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -353,8 +339,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MonitorOS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="199" column="36" lean-forward="true" selection-start-line="199" selection-start-column="36" selection-end-line="199" selection-end-column="36" />
+        <state relative-caret-position="315">
+          <caret line="185" column="9" lean-forward="true" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
             <element signature="e#94#5026#0" />
